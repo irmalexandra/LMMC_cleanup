@@ -1,0 +1,25 @@
+{
+  "name": "cors_proxy",
+  "version": "1.0.0",
+  "description": "a proxy to inject CORS in tautulli API requests",
+  "main": "cors_proxy.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node cors_proxy.js"
+  },
+  "keywords": [
+    "proxy",
+    "CORS",
+    "tautulli"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "eslint": "^6.8.0",
+    "express": "^4.17.1",
+    "package.json": "^2.0.1",
+    "request": "^2.88.2"
+  }
+}
