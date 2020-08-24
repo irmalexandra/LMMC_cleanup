@@ -3,16 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <title>lmmc cleaner</title>
-    <link rel="shortcut icon" type="image/png" href="{% static 'favicon.png' %}"/>
-	<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-	<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+<!--    <link rel="shortcut icon" type="image/png" href="{% static 'favicon.png' %}"/>-->
+<!--	<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">-->
+<!--	<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>-->
+<!--	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
+<!--	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">-->
+<!--	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>-->
+<!--	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>-->
+<!--	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>-->
+<!--	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>-->
 	<link rel="stylesheet" href="main.css"/>
 </head>
 <body>
@@ -21,28 +20,28 @@
         <h3>Welcome to Loki's LMMC cleanup tool, here you can scan the database with certain parameters and
         choose what needs to be deleted!</h3>
     </header>
-    <form class="submission-form">
+    <form class="submission-form" id="info-form">
         <div class="radio-list" id="library-list">
             <span id="library-list-text">Select a library:</span>
         </div>
         <div class="radio-list" id="resolution-options">
             <span>Select the highest quality:</span>
-            <input type="radio" class="resolution" id="sd">
+            <input type="radio" class="resolution" name="resolution" id="sd" value="SD">
             <label for="sd">SD</label>
-            <input type="radio" class="resolution" id="480">
+            <input type="radio" class="resolution" name="resolution" id="480" value="480">
             <label for="480">480</label>
-            <input type="radio" class="resolution" id="720">
+            <input type="radio" class="resolution" name="resolution" id="720" value="720">
             <label for="720">720</label>
-            <input type="radio" class="resolution" id="1080">
+            <input type="radio" class="resolution" name="resolution" id="1080" value="1080">
             <label for="1080">1080</label>
-            <input type="radio" class="resolution" id="4k">
+            <input type="radio" class="resolution" name="resolution" id="4k" value="4K">
             <label for="4k">4K</label>
         </div>
         <div class="datetime-field" >
             <label for="cutoff-date">Enter a cutoff date:</label>
             <input type="datetime-local" id="cutoff-date">
         </div>
-         <input type="submit" value="Submit">
+        <input type="submit" value="Submit" id="form-submit">
     </form>
 </div>
     <script src="java.js"></script>
