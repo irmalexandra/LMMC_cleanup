@@ -15,9 +15,11 @@ app.use((req, res, next) => {
 });
 
 app.get('/api/v1/get_library_names', (req, res) => {
+  let tempUrl = 'http://' + ip + server_port + api_start + api_key + "&cmd=get_library_names"
   request(
-    { url: 'http://' + ip + server_port + api_start + api_key + "&cmd=get_library_names" },
+    { url: tempUrl },
     (error, response, body) => {
+      console.log(tempUrl)
       if (error || response.statusCode !== 200) {
         return res.status(500).json({ type: 'error', message: err.message });
       }
@@ -28,10 +30,13 @@ app.get('/api/v1/get_library_names', (req, res) => {
 });
 
 app.get('/api/v1/get_library_media_info/:libraryID', (req, res) => {
+  console.log(tempUrl)
   let libraryID = req.params.libraryID
+  let tempUrl = 'http://' + ip + server_port + api_start + api_key + "&cmd=get_library_names"
   request(
-    { url: 'http://' + ip + server_port + api_start + api_key + "&cmd=get_library_names", req: libraryID },
+    { url: tempUrl, req: libraryID },
     (error, response, body) => {
+
       if (error || response.statusCode !== 200) {
         return res.status(500).json({ type: 'error', message: err.message });
       }
